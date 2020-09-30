@@ -1,5 +1,8 @@
 # 專題：Model Ball
 
+[![hackmd-github-sync-badge](https://hackmd.io/GkDflnk9QcqAzlNA31NfuQ/badge)](https://hackmd.io/GkDflnk9QcqAzlNA31NfuQ)
+
+
 ## 目的
 選擇前五局的大小分來做分析研究，利用機器學習讓模型判斷出在該比賽條件下，前五局最後的總分會是大於或小於基準。
 
@@ -24,6 +27,13 @@
 ![](https://i.imgur.com/1WOheXt.jpg)
 情感分析流程首先為收集推特文章內容，使用到的套件有Tweepy與Twint接著，針對推文的部分做資料處理，處理完之後，利用TextBlob library做情感分析，最後將結果視覺化呈現，使用的是Elasticsearch的Kibana
 
+> python code 目錄 - crawling
+> * get_id_from_wiki.py - 取得用戶twitter帳號id
+> * hello_tweepy_learning.py - tweepy操作方法
+> * hello_tweepy_get_user_information.py - 利用tweepy取得用戶twitter information
+> * csv_to_json.py - csv轉換成json的資料格式
+> * twint_nltk.py -  利用twint取得用戶twitter information
+
 ![](https://i.imgur.com/n7PVLJC.jpg)
 
 利用下關鍵字的方式去爬取推文，所下的關鍵字包含了MLB 與各球隊隊名，然後利用Tweepy跟Twint來爬取我們感興趣的推文內容
@@ -34,6 +44,13 @@
 我們可以設定This和is為stop word. 然後移除標點符號
 剩下的great被判定為positive，progress 被判定為neutral
 我們即可認爲這篇推文為一篇正向的推文
+
+> python code 目錄 - sentiment analysis
+> * NLTK_test_01.py - how to use NLTK packages
+> * NLTK_test_02.py - how to use NLTK packages
+> * NTLK_twitter.py - twitter's sentiment analysis
+> * NLTK to ELK.py - send data to ELK
+> * Map_to_ES.py - make fan's map
 
 ![](https://i.imgur.com/TkuMd9G.jpg)
 
